@@ -25,4 +25,5 @@
 /* CSS Modules feature */
 .nav a:global(.active) {
   background-color: var(--color-dark--0);
+  transition: background-color 0.2s ease-in-out;
 }
