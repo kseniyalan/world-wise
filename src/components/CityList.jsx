@@ -13,7 +13,7 @@ CityList.propTypes = {
 function CityList({ cities, isLoading }) {
     if (isLoading) return <Spinner />;
 
-    if (!cities.length) return <Message message='Add your first city by clicking on the city on the map!' />;
+    if (cities.length === 0) return <Message message='Add your first city by clicking on the city on the map!' />;
 
     return (
         <ul className={styles.cityList}>
