@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import styles from './CityItem.module.css'; 
 import { Link } from 'react-router-dom';
+import { useCities } from '../contexts/CitiesContext';
+import styles from './CityItem.module.css'; 
 
 CityItem.propTypes = {
     city: PropTypes.object.isRequired,
@@ -15,13 +16,14 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city, onCityClick }) {
+    const { currentCity } = useCities();
     const { id, cityName, emoji, date, position } = city;
 
     return (
         <li>
             <Link
                 to={`/app/cities/${id}?lat=${position.lat}&lng=${position.lng}`}
-                className={styles.cityItem}
+                className={`${styles.cityItem} ${id === currentCity.id && styles['cityItem--active']}`}
             >
                 <span className={styles.emoji}>{emoji}</span>
                 <h3 className={styles.name} onClick={() => onCityClick(city)}>{cityName}</h3>

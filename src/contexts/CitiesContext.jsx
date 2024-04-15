@@ -15,6 +15,7 @@ export const useCities = () => {
 // Create a provider component
 export const CitiesProvider = ({ children }) => {
     const [cities, setCities] = useState([]);
+    const [currentCity, setCurrentCity] = useState({});
     const [isLoading, setIsLoading] = useState(false);
   
     useEffect(() => {
@@ -33,8 +34,21 @@ export const CitiesProvider = ({ children }) => {
       fetchCities();
     }, []);
 
+    async function getCurrentCity (id) {
+      try {
+        setIsLoading(true);
+        const response = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await response.json();
+        setCurrentCity(data);
+      } catch (error) {
+          console.error("Error fetching cities", error);
+      } finally {
+          setIsLoading(false);
+      }
+    }
+
     return (
-        <CitiesContext.Provider value={{ cities, isLoading }}>
+        <CitiesContext.Provider value={{ cities, currentCity, isLoading, getCurrentCity }}>
             {children}
         </CitiesContext.Provider>
     );
