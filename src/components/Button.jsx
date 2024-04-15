@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 function Button({ onClick, children, styleClass}) {
     Button.propTypes = {
-        onClick: PropTypes.func.isRequired,
+        onClick: PropTypes.func,
         children: PropTypes.node.isRequired,
         styleClass: PropTypes.string,
     };

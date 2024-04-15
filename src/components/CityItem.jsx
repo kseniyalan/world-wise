@@ -22,7 +22,7 @@ function CityItem({ city, onCityClick }) {
     return (
         <li>
             <Link
-                to={`/app/cities/${id}?lat=${position.lat}&lng=${position.lng}`}
+                to={`${id}?lat=${position.lat}&lng=${position.lng}`}
                 className={`${styles.cityItem} ${id === currentCity.id && styles['cityItem--active']}`}
             >
                 <span className={styles.emoji}>{emoji}</span>

@@ -50,7 +50,11 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
-        <Button styleClass="primary">Add</Button>
+        <Button
+          styleClass="primary"
+        >
+          Add
+        </Button>
         <BackButton />
       </div>
     </form>
