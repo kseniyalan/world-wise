@@ -22,7 +22,7 @@ function Map() {
       );
 
     return (
-        <div className={styles.mapContainer} onClick={() => {navigate('form')}}>
+        <div className={styles.mapContainer}>
             <MapContainer
                 className={styles.map}
                 center={mapPosition}
@@ -58,8 +58,10 @@ function ChangeMapCenter({ position }) {
 function DetectClickOnMap() {
     const navigate = useNavigate();
     useMapEvents({
-        //click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
-        click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+        click: (e) => navigate({
+            pathname: 'form',
+            search: `?lat=${e.latlng.lat}&lng=${e.latlng.lng}`,
+        }),
     });
 } 
 

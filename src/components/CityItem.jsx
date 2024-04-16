@@ -5,7 +5,6 @@ import styles from './CityItem.module.css';
 
 CityItem.propTypes = {
     city: PropTypes.object.isRequired,
-    onCityClick: PropTypes.func.isRequired
 };
 
 const formatDate = (date) =>
@@ -15,9 +14,14 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
-function CityItem({ city, onCityClick }) {
+function CityItem({ city }) {
     const { currentCity } = useCities();
     const { id, cityName, emoji, date, position } = city;
+
+    const handleBtnClick = (e) => {
+        e.preventDefault();
+
+    }
 
     return (
         <li>
@@ -26,12 +30,12 @@ function CityItem({ city, onCityClick }) {
                 className={`${styles.cityItem} ${id === currentCity.id && styles['cityItem--active']}`}
             >
                 <span className={styles.emoji}>{emoji}</span>
-                <h3 className={styles.name} onClick={() => onCityClick(city)}>{cityName}</h3>
+                <h3 className={styles.name}>{cityName}</h3>
                 <time className={styles.date}>{formatDate(date)}</time>
                 <button
                     type='button'
                     className={styles.deleteBtn}
-                    onClick={() => onCityClick(city)}
+                    onClick={() => handleBtnClick(city)}
                 >
                     &times;
                 </button>
