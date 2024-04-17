@@ -33,6 +33,7 @@ function Form() {
   const [lat, lng] = useUrlPosition();
 
   useEffect(() => {
+    if (!lat || !lng) return;
     async function fetchCityData(){
       try {
         setIsLoadingGeocoding(true);
@@ -56,6 +57,7 @@ function Form() {
 
   if (isLoadingGeocoding) return <Spinner />;
   if (geocodingError) return <Message message={geocodingError} />;
+  if (!lat || !lng) return <Message message="Click on the map to add a new city!" />;
 
   return (
     <form className={styles.form}>
