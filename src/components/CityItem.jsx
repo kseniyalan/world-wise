@@ -15,12 +15,12 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-    const { currentCity } = useCities();
+    const { currentCity, deleteCity } = useCities();
     const { id, cityName, emoji, date, position } = city;
 
-    const handleBtnClick = (e) => {
+    const handleDeleteCity = (e) => {
         e.preventDefault();
-
+        deleteCity(id);
     }
 
     return (
@@ -35,7 +35,7 @@ function CityItem({ city }) {
                 <button
                     type='button'
                     className={styles.deleteBtn}
-                    onClick={() => handleBtnClick(city)}
+                    onClick={(e) => handleDeleteCity(e)}
                 >
                     &times;
                 </button>
