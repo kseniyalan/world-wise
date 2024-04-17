@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
-function Button({ onClick, children, styleClass}) {
+function Button({ onClick, children, styleClass, type="button"}) {
     Button.propTypes = {
         onClick: PropTypes.func,
         children: PropTypes.node.isRequired,
@@ -10,7 +10,7 @@ function Button({ onClick, children, styleClass}) {
 
     return (
         <button
-            type="button"
+            type={type}
             className={`${styles.btn} ${styles[styleClass]}`}
             onClick={onClick}
         >
