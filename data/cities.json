@@ -25,78 +25,6 @@
       }
     },
     {
-      "id": "769e",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:22:42.687Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
-      "id": "76b7",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:22:42.687Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
-      "id": "2cbf",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:22:42.687Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
-      "id": "f43d",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:22:42.687Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
-      "id": "5010",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:22:42.687Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
-      "id": "bd09",
-      "cityName": "Torsby",
-      "country": "Sweden",
-      "emoji": "🇸🇪",
-      "date": "2024-04-17T21:24:34.890Z",
-      "notes": "",
-      "position": {
-        "lat": "60.50052541051131",
-        "lng": "13.139648437500002"
-      }
-    },
-    {
       "id": "2c7e",
       "cityName": "Castello de la Plana",
       "country": "Spain",
@@ -118,6 +46,18 @@
       "position": {
         "lat": "62.49202773042693",
         "lng": "95.88867187500001"
+      }
+    },
+    {
+      "id": "f074",
+      "cityName": "Bornholm Kommune",
+      "country": "Denmark",
+      "emoji": "🇩🇰",
+      "date": "2024-04-19T18:05:18.639Z",
+      "notes": "",
+      "position": {
+        "lat": "55.040614327716746",
+        "lng": "14.919433593750002"
       }
     }
   ]
