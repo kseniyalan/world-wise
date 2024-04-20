@@ -13,18 +13,6 @@
       "id": "324232678"
     },
     {
-      "id": "74d0",
-      "cityName": "Suure-Jaani",
-      "country": "Estonia",
-      "emoji": "🇪🇪",
-      "date": "2024-04-17T21:17:02.818Z",
-      "notes": "Cool!",
-      "position": {
-        "lat": "58.58543569119917",
-        "lng": "25.7080078125"
-      }
-    },
-    {
       "id": "2c7e",
       "cityName": "Castello de la Plana",
       "country": "Spain",
@@ -37,18 +25,6 @@
       }
     },
     {
-      "id": "221a",
-      "cityName": "Tura",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2024-04-17T22:08:23.702Z",
-      "notes": "",
-      "position": {
-        "lat": "62.49202773042693",
-        "lng": "95.88867187500001"
-      }
-    },
-    {
       "id": "f074",
       "cityName": "Bornholm Kommune",
       "country": "Denmark",
@@ -58,6 +34,18 @@
       "position": {
         "lat": "55.040614327716746",
         "lng": "14.919433593750002"
+      }
+    },
+    {
+      "id": "640c",
+      "cityName": "Grebow",
+      "country": "Poland",
+      "emoji": "🇵🇱",
+      "date": "2024-04-20T18:04:00.983Z",
+      "notes": "",
+      "position": {
+        "lat": "50.51342652633956",
+        "lng": "21.884765625"
       }
     }
   ]

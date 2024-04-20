@@ -19,9 +19,17 @@ function City() {
   const { getCurrentCity, currentCity, isLoading } = useCities();
   const { cityName, emoji, date, notes } = currentCity;
 
-  useEffect(function () {
+  // getCurrentCity(id) function is a part of the CitiesContext value object.  
+  // So, if we provide getCurrentCity(id) function as a dependensy array for this useEffect():
+  //Function will update the state (currentCity) each time it is executed. Then with the currentCity update the entire contextValue object will be recreated -> 
+  // -> getCurrentCity(id) function will be recreated -> useEffect will be triggered again -> getCurrentCity(id) will be executed again ->
+  // -> INFINITE LOOP!
+  // But we can't remove getCurrentCity(id) from the dependensy array
+  // So to avoid this, we need to wrap getCurrentCity(id) function in a useCallback hook in the CitiesContext component.
+  
+  useEffect(function () { 
     getCurrentCity(id);
-  }, [id]);
+  }, [id, getCurrentCity]);
 
   if (isLoading) return <Spinner />;
 
